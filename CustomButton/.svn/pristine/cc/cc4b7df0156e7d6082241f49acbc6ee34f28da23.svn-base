@@ -1,0 +1,40 @@
+package com.andli.ui.customdemo;
+
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.StateListDrawable;
+import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.andli.ui.custombutton.CustomButton;
+import com.andli.ui.custombutton.CustomHelp;
+
+public class TestView extends Activity {
+	CustomButton customView;
+	Button testButton;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.testview);
+
+		testButton = (Button) findViewById(R.id.testbutton);
+		testButton.setBackgroundDrawable(CustomHelp.newSelector(this,
+				R.drawable.btn_blue_normal, R.drawable.btn_blue_press,
+				R.drawable.btn_blue_normal, R.drawable.btn_blue_normal));
+
+		customView = (CustomButton) findViewById(R.id.customview);
+		// customView.setClickable(true);
+
+		// customView.setText("自定义按钮控件");
+		customView.setBackgroundDrawable(CustomHelp.newSelector(this,
+				R.drawable.btn_blue_normal, R.drawable.btn_blue_press,
+				R.drawable.btn_blue_normal, R.drawable.btn_blue_normal));
+
+	}
+
+}

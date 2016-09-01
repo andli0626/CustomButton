@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 添加自定义的控件 -->
+
+    <com.andli.ui.custombutton.CustomButton
+        android:id="@+id/customview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    </com.andli.ui.custombutton.CustomButton>
+
+    <Button
+        android:id="@+id/testbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="系统按钮"
+        android:textSize="20sp" />
+
+</LinearLayout>
